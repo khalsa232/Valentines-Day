@@ -1,0 +1,317 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Animation</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(circle, #ffe4e1, #ffb6c1);
+      overflow: hidden;
+    }
+
+    .heart {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background: red;
+      transform: rotate(-45deg);
+      animation: heartbeat 2s infinite;
+      cursor: pointer;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -75px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 75px;
+      top: 0;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.1) rotate(-45deg);
+      }
+    }
+
+    .text {
+      position: absolute;
+      bottom: 20px;
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 3s infinite alternate;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      animation: fall 3s ease-in-out forwards;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(500px) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart" onclick="createConfettiAndShowText()"></div>
+  <div class="text" id="valentine-text">Happy Valentine's Day Daddy ᡣ • . • 𐭩 ♡</div>
+
+  <script>
+    function createConfettiAndShowText() {
+      const colors = ['#FF69B4', '#FFD700', '#FF4500', '#ADFF2F', '#1E90FF'];
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.top = `${Math.random() * 50}%`;
+        confetti.style.animationDelay = `${Math.random() * 2}s`;
+        document.body.appendChild(confetti);
+
+        confetti.addEventListener('animationend', () => {
+          confetti.remove();
+        });
+      }
+
+      const text = document.getElementById('valentine-text');
+      text.style.opacity = '1';
+      text.style.visibility = 'visible';
+    }
+  </script>
+</body>
+</html>
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Extravaganza</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(circle, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #ff9a9e);
+      background-size: 200% 200%;
+      animation: gradientAnimation 8s ease infinite;
+      overflow: hidden;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .heart {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, #ff4e50, #ff0000);
+      transform: rotate(-45deg);
+      animation: heartbeat 1.5s infinite;
+      cursor: pointer;
+      box-shadow: 0 15px 30px rgba(255, 0, 0, 0.6), inset 0 -5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, #ff4e50, #ff0000);
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -75px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 75px;
+      top: 0;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.2) rotate(-45deg);
+      }
+    }
+
+    .text {
+      position: absolute;
+      bottom: 40px;
+      font-family: 'Arial', sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 3s infinite alternate;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      animation: fall 4s ease-in-out forwards;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(600px) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #ffeb3b, #ff9800);
+      border-radius: 50%;
+      box-shadow: 0 0 15px 5px rgba(255, 235, 59, 0.8);
+      animation: sparkle 1s infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart" onclick="createEffects()"></div>
+  <div class="text" id="valentine-text">Happy Valentine's Day Daddy ᡣ • . • 𐭩 ♡</div>
+
+  <script>
+    function createEffects() {
+      createConfetti();
+      createSparkles();
+      showText();
+    }
+
+    function createConfetti() {
+      const colors = ['#FF69B4', '#FFD700', '#FF4500', '#ADFF2F', '#1E90FF'];
+      for (let i = 0; i < 75; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.top = `${Math.random() * 50}%`;
+        confetti.style.animationDelay = `${Math.random() * 2}s`;
+        document.body.appendChild(confetti);
+
+        confetti.addEventListener('animationend', () => {
+          confetti.remove();
+        });
+      }
+    }
+
+    function createSparkles() {
+      for (let i = 0; i < 30; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = `${Math.random() * 100}%`;
+        sparkle.style.top = `${Math.random() * 100}%`;
+        sparkle.style.animationDelay = `${Math.random()}s`;
+        document.body.appendChild(sparkle);
+
+        sparkle.addEventListener('animationend', () => {
+          sparkle.remove();
+        });
+      }
+    }
+
+    function showText() {
+      const text = document.getElementById('valentine-text');
+      text.style.opacity = '1';
+      text.style.visibility = 'visible';
+    }
+  </script>
+</body>
+</html>
